@@ -49,7 +49,9 @@ class ViewController: UIViewController,MFMailComposeViewControllerDelegate {
         
         mailComposerVC.setToRecipients(["pkc456@gmail.com"])
         mailComposerVC.setSubject("AWARE APP:- \(textfieldTitle.text)")
-        mailComposerVC.setMessageBody(textviewDetails.text, isHTML: false)
+        
+        let details = "Hi, \n I am writing this on the behalf of Aware app. Details are as follows:- \n \n \(textviewDetails.text)"
+        mailComposerVC.setMessageBody(details, isHTML: false)
         
         return mailComposerVC
     }
