@@ -51,6 +51,9 @@
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="12"/>
                                 <state key="normal" title="Click me to get current location"/>
+                                <connections>
+                                    <action selector="btnGetLocationAction:" destination="BYZ-38-t0r" eventType="touchUpInside" id="Spq-wY-z9e"/>
+                                </connections>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Title:-" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="qkU-Tn-bKe">
                                 <frame key="frameInset" minX="10" minY="145" width="46" height="21"/>
@@ -89,6 +92,12 @@
                             </connections>
                         </barButtonItem>
                     </navigationItem>
+                    <connections>
+                        <outlet property="textfieldLocation" destination="cxP-hy-2uj" id="CpD-zw-Rdy"/>
+                        <outlet property="textfieldName" destination="ku5-Ai-sWg" id="UQI-kd-gdx"/>
+                        <outlet property="textfieldTitle" destination="eu9-pH-sjw" id="djS-dx-OZT"/>
+                        <outlet property="textviewDetails" destination="vHu-xW-7aa" id="CoL-mD-Ggm"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
