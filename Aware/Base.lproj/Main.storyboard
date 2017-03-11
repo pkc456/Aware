@@ -21,73 +21,64 @@
                         <rect key="frame" x="0.0" y="64" width="375" height="603"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Your name:-" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="cW4-cX-1Ye">
-                                <rect key="frame" x="10" y="20" width="94" height="21"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <nil key="textColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Name" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="ku5-Ai-sWg" customClass="JVFloatLabeledTextField">
-                                <rect key="frame" x="122" y="16" width="182" height="30"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Name" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="ku5-Ai-sWg" customClass="JVFloatLabeledTextField">
+                                <rect key="frame" x="10" y="10" width="355" height="40"/>
                                 <nil key="textColor"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="12"/>
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
-                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Enter your addrees manually" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="cxP-hy-2uj">
-                                <rect key="frame" x="122" y="59" width="182" height="30"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Location" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="cxP-hy-2uj" customClass="JVFloatLabeledTextField">
+                                <rect key="frame" x="10" y="60" width="305" height="40"/>
                                 <nil key="textColor"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="12"/>
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Location:-" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="XKg-hH-eL3">
-                                <rect key="frame" x="10" y="64" width="78" height="21"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Title of your suggestion/complaint" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="eu9-pH-sjw" customClass="JVFloatLabeledTextField">
+                                <rect key="frame" x="10" y="110" width="355" height="40"/>
                                 <nil key="textColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="tNY-Ig-JPa">
-                                <rect key="frame" x="71" y="107" width="178" height="20"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="12"/>
-                                <state key="normal" title="Click me to get current location"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="tailTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="tNY-Ig-JPa">
+                                <rect key="frame" x="315" y="60" width="60" height="40"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="12"/>
+                                <state key="normal" title="Get Me"/>
                                 <connections>
                                     <action selector="btnGetLocationAction:" destination="BYZ-38-t0r" eventType="touchUpInside" id="Spq-wY-z9e"/>
                                 </connections>
                             </button>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Title:-" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="qkU-Tn-bKe">
-                                <rect key="frame" x="10" y="145" width="46" height="21"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <nil key="textColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="What's your suggestion/complaint" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="eu9-pH-sjw">
-                                <rect key="frame" x="90" y="141" width="214" height="30"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <nil key="textColor"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="12"/>
-                                <textInputTraits key="textInputTraits"/>
-                            </textField>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Details:-" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="J50-aB-s63">
-                                <rect key="frame" x="10" y="208" width="65" height="21"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <nil key="textColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" keyboardDismissMode="onDrag" translatesAutoresizingMaskIntoConstraints="NO" id="vHu-xW-7aa">
-                                <rect key="frame" x="83" y="197" width="221" height="128"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <color key="backgroundColor" red="1" green="0.21852870460000001" blue="0.13894737469999999" alpha="1" colorSpace="calibratedRGB"/>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="M4h-fb-bJU" customClass="JVFloatLabeledTextView">
+                                <rect key="frame" x="10" y="160" width="355" height="128"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="128" id="E9J-Lr-4Xz"/>
+                                </constraints>
                                 <fontDescription key="fontDescription" type="system" pointSize="12"/>
                                 <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="string" keyPath="placeholder" value="Details of your suggestion/complaint"/>
+                                </userDefinedRuntimeAttributes>
                             </textView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="eu9-pH-sjw" firstAttribute="top" secondItem="cxP-hy-2uj" secondAttribute="bottom" constant="10" id="3gL-pl-JVi"/>
+                            <constraint firstItem="M4h-fb-bJU" firstAttribute="top" secondItem="eu9-pH-sjw" secondAttribute="bottom" constant="10" id="9wE-sf-w4g"/>
+                            <constraint firstItem="tNY-Ig-JPa" firstAttribute="height" secondItem="cxP-hy-2uj" secondAttribute="height" id="AGn-0I-bt7"/>
+                            <constraint firstItem="eu9-pH-sjw" firstAttribute="leading" secondItem="ku5-Ai-sWg" secondAttribute="leading" id="AgZ-TQ-n4Z"/>
+                            <constraint firstAttribute="trailing" secondItem="ku5-Ai-sWg" secondAttribute="trailing" constant="10" id="BLd-tc-Dnf"/>
+                            <constraint firstItem="cxP-hy-2uj" firstAttribute="leading" secondItem="ku5-Ai-sWg" secondAttribute="leading" id="Izt-YY-jKd"/>
+                            <constraint firstItem="ku5-Ai-sWg" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" constant="10" id="TLO-TG-pt6"/>
+                            <constraint firstItem="tNY-Ig-JPa" firstAttribute="top" secondItem="cxP-hy-2uj" secondAttribute="top" id="Wel-Vq-0Rn"/>
+                            <constraint firstItem="eu9-pH-sjw" firstAttribute="trailing" secondItem="ku5-Ai-sWg" secondAttribute="trailing" id="csa-H7-fqc"/>
+                            <constraint firstItem="M4h-fb-bJU" firstAttribute="trailing" secondItem="eu9-pH-sjw" secondAttribute="trailing" id="d4W-wh-8bT"/>
+                            <constraint firstAttribute="trailing" secondItem="tNY-Ig-JPa" secondAttribute="trailing" id="eBi-hE-kSB"/>
+                            <constraint firstItem="cxP-hy-2uj" firstAttribute="top" secondItem="ku5-Ai-sWg" secondAttribute="bottom" constant="10" id="hRT-gh-tRr"/>
+                            <constraint firstItem="ku5-Ai-sWg" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="10" id="iez-5f-rHH"/>
+                            <constraint firstItem="M4h-fb-bJU" firstAttribute="leading" secondItem="eu9-pH-sjw" secondAttribute="leading" id="kDD-qr-4ug"/>
+                            <constraint firstItem="cxP-hy-2uj" firstAttribute="trailing" secondItem="ku5-Ai-sWg" secondAttribute="trailing" constant="-50" id="oZw-vs-p40"/>
+                            <constraint firstItem="tNY-Ig-JPa" firstAttribute="leading" secondItem="cxP-hy-2uj" secondAttribute="trailing" id="z0h-zd-4fa"/>
+                        </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="g3o-zv-kSY">
                         <barButtonItem key="rightBarButtonItem" title="Send" id="dpY-Vw-4VA">
@@ -97,15 +88,15 @@
                         </barButtonItem>
                     </navigationItem>
                     <connections>
+                        <outlet property="textViewDetails" destination="M4h-fb-bJU" id="hJx-Ua-ZWl"/>
                         <outlet property="textfieldLocation" destination="cxP-hy-2uj" id="CpD-zw-Rdy"/>
                         <outlet property="textfieldName" destination="ku5-Ai-sWg" id="8i4-JV-3ez"/>
                         <outlet property="textfieldTitle" destination="eu9-pH-sjw" id="djS-dx-OZT"/>
-                        <outlet property="textviewDetails" destination="vHu-xW-7aa" id="CoL-mD-Ggm"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1055.625" y="123.59154929577466"/>
+            <point key="canvasLocation" x="1055.2" y="122.78860569715144"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="7aj-VW-vV8">

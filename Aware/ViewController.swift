@@ -14,11 +14,18 @@ class ViewController: UIViewController,MFMailComposeViewControllerDelegate {
     @IBOutlet weak var textfieldName: UITextField!
     @IBOutlet weak var textfieldLocation: UITextField!
     @IBOutlet weak var textfieldTitle: UITextField!
-    @IBOutlet weak var textviewDetails: UITextView!
+    @IBOutlet weak var textViewDetails: UITextView!
     
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
+        setUI()
+    }
+    
+    private func setUI(){
+        textViewDetails.layer.cornerRadius = 6.0
+        textViewDetails.layer.borderColor = UIColor.lightGray.cgColor
+        textViewDetails.layer.borderWidth = 1.0
     }
 
     override func didReceiveMemoryWarning() {
@@ -39,7 +46,9 @@ class ViewController: UIViewController,MFMailComposeViewControllerDelegate {
     }
     
     func showSendMailErrorAlert() {
-        let sendMailErrorAlert = UIAlertController(title: "Could Not Send Email", message: "Your device could not send e-mail.  Please check e-mail configuration and try again.", preferredStyle: .alert)
+        let sendMailErrorAlert = UIAlertController(title: "Could Not Send Email", message: "Your device could not send e-mail.  Please check e-mail configuration and try again.", preferredStyle: .alert)                
+        sendMailErrorAlert.addAction(UIAlertAction(title: "Cancel", style: .default, handler: nil))
+        
         self.present(sendMailErrorAlert, animated: true, completion: nil)
     }
     
@@ -50,7 +59,7 @@ class ViewController: UIViewController,MFMailComposeViewControllerDelegate {
         mailComposerVC.setToRecipients(["pkc456@gmail.com"])
         mailComposerVC.setSubject("AWARE APP:- \(textfieldTitle.text)")
         
-        let details = "Hi, \n I am writing this on the behalf of Aware app. Details are as follows:- \n \n \(textviewDetails.text)"
+        let details = "Hi, \n I \(textfieldName.text); writing this on the behalf of Aware app from \(textfieldLocation.text). Details are as follows:- \n \n \(textViewDetails.text)"
         mailComposerVC.setMessageBody(details, isHTML: false)
         
         return mailComposerVC
