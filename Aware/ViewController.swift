@@ -292,7 +292,7 @@ SKPaymentTransactionObserver {
                     
                 case .failed:
                     SKPaymentQueue.default().finishTransaction(transaction as! SKPaymentTransaction)
-                    Utility.showAlertMessage(title: "Not able to donate. Retry please.", subTitle: "", messageType: .error)
+                    Utility.showAlertMessage(title: "Not able to donate. Retry please", subTitle: "", messageType: .error)
 
                     break
                 case .restored:
