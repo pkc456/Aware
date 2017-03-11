@@ -81,6 +81,11 @@
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" title="Aware and Share" id="g3o-zv-kSY">
+                        <barButtonItem key="leftBarButtonItem" title="Donate ₹10" id="g0g-Ky-tRV">
+                            <connections>
+                                <action selector="btnDonateAction:" destination="BYZ-38-t0r" id="htZ-4u-RxO"/>
+                            </connections>
+                        </barButtonItem>
                         <barButtonItem key="rightBarButtonItem" title="Send" id="dpY-Vw-4VA">
                             <connections>
                                 <action selector="btnSendAction:" destination="BYZ-38-t0r" id="ggo-Uw-6jo"/>
@@ -88,6 +93,7 @@
                         </barButtonItem>
                     </navigationItem>
                     <connections>
+                        <outlet property="btnDonate" destination="g0g-Ky-tRV" id="C46-Y4-0H5"/>
                         <outlet property="textViewDetails" destination="M4h-fb-bJU" id="hJx-Ua-ZWl"/>
                         <outlet property="textfieldLocation" destination="cxP-hy-2uj" id="CpD-zw-Rdy"/>
                         <outlet property="textfieldName" destination="ku5-Ai-sWg" id="8i4-JV-3ez"/>
