@@ -14,6 +14,7 @@
 		7355C6521DCB14CF00A5C990 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 7355C6501DCB14CF00A5C990 /* LaunchScreen.storyboard */; };
 		D49B85971E73FF8B0064B679 /* DSDLocationHandler.swift in Sources */ = {isa = PBXBuildFile; fileRef = D49B85961E73FF8B0064B679 /* DSDLocationHandler.swift */; };
 		D49B85991E7400870064B679 /* CoreLocation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D49B85981E7400870064B679 /* CoreLocation.framework */; };
+		D49B859B1E740DC50064B679 /* Utility.swift in Sources */ = {isa = PBXBuildFile; fileRef = D49B859A1E740DC50064B679 /* Utility.swift */; };
 		EF4BE0C8264B5074CC063B5E /* Pods_Aware.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8F247554E35B08CA181729F7 /* Pods_Aware.framework */; };
 /* End PBXBuildFile section */
 
@@ -29,6 +30,7 @@
 		99B894386D350C566FBF7A34 /* Pods-Aware.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Aware.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Aware/Pods-Aware.debug.xcconfig"; sourceTree = "<group>"; };
 		D49B85961E73FF8B0064B679 /* DSDLocationHandler.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DSDLocationHandler.swift; sourceTree = "<group>"; };
 		D49B85981E7400870064B679 /* CoreLocation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreLocation.framework; path = System/Library/Frameworks/CoreLocation.framework; sourceTree = SDKROOT; };
+		D49B859A1E740DC50064B679 /* Utility.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Utility.swift; sourceTree = "<group>"; };
 		DE6B22E993FBB318B864801B /* Pods-Aware.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Aware.release.xcconfig"; path = "Pods/Target Support Files/Pods-Aware/Pods-Aware.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -98,6 +100,7 @@
 		D49B85941E73FF8B0064B679 /* Utility */ = {
 			isa = PBXGroup;
 			children = (
+				D49B859A1E740DC50064B679 /* Utility.swift */,
 				D49B85951E73FF8B0064B679 /* Location Handler */,
 			);
 			path = Utility;
@@ -235,6 +238,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				D49B859B1E740DC50064B679 /* Utility.swift in Sources */,
 				7355C64A1DCB14CF00A5C990 /* ViewController.swift in Sources */,
 				D49B85971E73FF8B0064B679 /* DSDLocationHandler.swift in Sources */,
 				7355C6481DCB14CF00A5C990 /* AppDelegate.swift in Sources */,
@@ -364,6 +368,8 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				DEVELOPMENT_TEAM = P6CL3M8X5H;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "$(SRCROOT)/Aware/Utility/PrefixHeader.pch";
 				INFOPLIST_FILE = Aware/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
@@ -383,6 +389,8 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				DEVELOPMENT_TEAM = P6CL3M8X5H;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "$(SRCROOT)/Aware/Utility/PrefixHeader.pch";
 				INFOPLIST_FILE = Aware/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";

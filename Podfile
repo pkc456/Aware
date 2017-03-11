@@ -8,6 +8,6 @@ target 'Aware' do
   # Pods for Aware
   pod 'IQKeyboardManagerSwift'
   pod 'JVFloatLabeledTextField', '~> 1.1'
-  
+  pod 'RMessage'
 
 end

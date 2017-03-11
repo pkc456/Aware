@@ -14,10 +14,10 @@
             buildForArchiving = "YES">
             <BuildableReference
                BuildableIdentifier = 'primary'
-               BlueprintIdentifier = '2A4448146C785C426971111F117D773C'
-               BlueprintName = 'JVFloatLabeledTextField'
+               BlueprintIdentifier = '84FAE04089F9D41BD662490D13344F81'
+               BlueprintName = 'PPTopMostController'
                ReferencedContainer = 'container:Pods.xcodeproj'
-               BuildableName = 'JVFloatLabeledTextField.framework'>
+               BuildableName = 'PPTopMostController.framework'>
             </BuildableReference>
          </BuildActionEntry>
       </BuildActionEntries>

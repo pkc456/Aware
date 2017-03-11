@@ -9,6 +9,7 @@
 import UIKit
 import MessageUI
 import CoreLocation
+import RMessage
 
 class ViewController: UIViewController,MFMailComposeViewControllerDelegate,DSDLocationHandlerDelegate {
 
@@ -50,10 +51,7 @@ class ViewController: UIViewController,MFMailComposeViewControllerDelegate,DSDLo
     
     //MARL: User defined action
     func showSendMailErrorAlert() {
-        let sendMailErrorAlert = UIAlertController(title: "Could Not Send Email", message: "Your device could not send e-mail.  Please check e-mail configuration and try again.", preferredStyle: .alert)                
-        sendMailErrorAlert.addAction(UIAlertAction(title: "Cancel", style: .default, handler: nil))
-        
-        self.present(sendMailErrorAlert, animated: true, completion: nil)
+        Utility.showAlertMessage(title: "Could Not Send Email", subTitle: "Your device could not send e-mail.  Please check e-mail configuration and try again", messageType: .error)
     }
     
     func configuredMailComposeViewController() -> MFMailComposeViewController {
@@ -74,17 +72,30 @@ class ViewController: UIViewController,MFMailComposeViewControllerDelegate,DSDLo
     }
     
     // MARK: MFMailComposeViewControllerDelegate Method
-    func mailComposeController(_ controller: MFMailComposeViewController, didFinishWith result: MFMailComposeResult, error: Error?) {
+    func mailComposeController(_ controller: MFMailComposeViewController, didFinishWith result: MFMailComposeResult, error: Error?)
+    {
+        var title = ""
+        var subtitle = ""
+        var type : RMessageType = .normal
         switch result {
-        case .cancelled:
-            print("Mail cancelled")
-        case .saved:
-            print("Mail saved")
-        case .sent:
-            print("Mail sent")
-        case .failed:
-            print("Mail send failure: \(error?.localizedDescription)")
+            case .cancelled:
+                title = "Mail cancelled"
+                subtitle = "You have cancelled the email"
+                type = .warning
+            case .saved:
+                title = "Mail saved"
+                subtitle = "You have saved the email"
+                    type = .normal
+            case .sent:
+                title = "Mail sent"
+                subtitle = "Thanks, your email is sent"
+                type = .success
+            case .failed:
+                title = "Mail send failure"
+                subtitle = "Oops, your email is not send"
+                type = .error
         }
+        Utility.showAlertMessage(title: title, subTitle: subtitle, messageType: type)
         
         controller.dismiss(animated: true, completion: nil)
     }
@@ -99,34 +110,11 @@ class ViewController: UIViewController,MFMailComposeViewControllerDelegate,DSDLo
     //DSDLocationHandlerDelegate
     func locationHandler(locationHandler:DSDLocationHandler, didGetLocationAddress addDic: Dictionary<String,String>, andLocation: CLLocation)
     {
-        print(addDic)
-        print(andLocation)
-        
-        let keys = addDic.keys.joined(separator: "-")
+//        let keys = addDic.keys.joined(separator: "-")
         let values = addDic.values.joined(separator: "-")
-
         textfieldLocation.text = values
         
-        let sendMailErrorAlert = UIAlertController(title: keys, message: values, preferredStyle: .alert)
-        sendMailErrorAlert.addAction(UIAlertAction(title: "Cancel", style: .default, handler: nil))
-        self.present(sendMailErrorAlert, animated: true, completion: nil)
-        
         DSDLocationHandler.sharedInstance.stopLocationUpdate()
-        
-        /*
-        let num = (andLocation.coordinate.longitude as NSNumber).floatValue
-        let formatter = NSNumberFormatter()
-        formatter.maximumFractionDigits = 4
-        formatter.minimumFractionDigits = 4
-        let str = formatter.stringFromNumber(num)
-        let num1 = (andLocation.coordinate.latitude as NSNumber).floatValue
-        let str1 = formatter.stringFromNumber(num1)
-        let latlongDic = ["lat":str1!, "long":str!] as NSDictionary
-        HMUtilityClass.saveObjectInUserDefault(latlongDic, key: "LatLong")
-        
-        let model = HMLocationModel(restDic: addDic as NSDictionary, lat: str1 , long: str,isdefaultLocation: false)
-        HMUtilityClass.saveObjectInUserDefault(model, key: "AddressModel")
-        */
     }
 }
 
