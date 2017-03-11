@@ -41,11 +41,16 @@ class ViewController: UIViewController,MFMailComposeViewControllerDelegate,DSDLo
     }
 
     @IBAction func btnSendAction(_ sender: UIBarButtonItem) {
-        let mailComposeViewController = configuredMailComposeViewController()
-        if MFMailComposeViewController.canSendMail() {
-            self.present(mailComposeViewController, animated: true, completion: nil)
-        } else {
-            self.showSendMailErrorAlert()
+        
+        if(isValid()){
+            let mailComposeViewController = configuredMailComposeViewController()
+            if MFMailComposeViewController.canSendMail() {
+                self.present(mailComposeViewController, animated: true, completion: nil)
+            } else {
+                self.showSendMailErrorAlert()
+            }
+        }else{
+            
         }
     }
     
@@ -68,7 +73,28 @@ class ViewController: UIViewController,MFMailComposeViewControllerDelegate,DSDLo
     }
     
     func isValid()->Bool{
-         return true
+        var valid = true
+        var title = ""
+        
+        if(textfieldName.text?.isEmpty)!{
+            valid = false
+            title = "Enter your name"
+        }else if(textfieldLocation.text?.isEmpty)!{
+            valid = false
+            title = "Enter your location manually or tap 'Get Me' button to detect your location"
+        }else if(textfieldTitle.text?.isEmpty)!{
+            valid = false
+            title = "Enter the title of your suggestion/complaint"
+        }else if(textViewDetails.text?.isEmpty)!{
+            valid = false
+            title = "Enter the detials of your suggestion/complaint"
+        }
+        
+        if(valid == false){
+            Utility.showAlertMessage(title: title, subTitle: "", messageType: .error)
+        }
+        
+         return valid
     }
     
     // MARK: MFMailComposeViewControllerDelegate Method
