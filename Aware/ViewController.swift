@@ -114,7 +114,7 @@ class ViewController: UIViewController,MFMailComposeViewControllerDelegate,DSDLo
                     type = .normal
             case .sent:
                 title = "Mail sent"
-                subtitle = "Thanks, your email is sent"
+                subtitle = "Thanks, your feedback/complaint is recieved"
                 type = .success
             case .failed:
                 title = "Mail send failure"
