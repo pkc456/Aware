@@ -1,0 +1,15 @@
+PODS:
+  - IQKeyboardManagerSwift (4.0.8)
+  - JVFloatLabeledTextField (1.1.1)
+
+DEPENDENCIES:
+  - IQKeyboardManagerSwift
+  - JVFloatLabeledTextField (~> 1.1)
+
+SPEC CHECKSUMS:
+  IQKeyboardManagerSwift: c04bc9f68473823f825eb44d958fce98d921bead
+  JVFloatLabeledTextField: 0e5524b097f102036214dd8279edc8ecf08b5e18
+
+PODFILE CHECKSUM: 379217a8420cedf888e5ad8d91179b6d365003ac
+
+COCOAPODS: 1.1.1

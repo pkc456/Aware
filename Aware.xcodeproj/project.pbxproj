@@ -12,6 +12,7 @@
 		7355C64D1DCB14CF00A5C990 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 7355C64B1DCB14CF00A5C990 /* Main.storyboard */; };
 		7355C64F1DCB14CF00A5C990 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 7355C64E1DCB14CF00A5C990 /* Assets.xcassets */; };
 		7355C6521DCB14CF00A5C990 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 7355C6501DCB14CF00A5C990 /* LaunchScreen.storyboard */; };
+		EF4BE0C8264B5074CC063B5E /* Pods_Aware.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8F247554E35B08CA181729F7 /* Pods_Aware.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -22,6 +23,9 @@
 		7355C64E1DCB14CF00A5C990 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		7355C6511DCB14CF00A5C990 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		7355C6531DCB14CF00A5C990 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		8F247554E35B08CA181729F7 /* Pods_Aware.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Aware.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		99B894386D350C566FBF7A34 /* Pods-Aware.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Aware.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Aware/Pods-Aware.debug.xcconfig"; sourceTree = "<group>"; };
+		DE6B22E993FBB318B864801B /* Pods-Aware.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Aware.release.xcconfig"; path = "Pods/Target Support Files/Pods-Aware/Pods-Aware.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -29,6 +33,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				EF4BE0C8264B5074CC063B5E /* Pods_Aware.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -40,6 +45,8 @@
 			children = (
 				7355C6461DCB14CF00A5C990 /* Aware */,
 				7355C6451DCB14CF00A5C990 /* Products */,
+				C3D6A86C96656BCFEB7A55E2 /* Pods */,
+				8CBACA324E219FAC257B0141 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -64,6 +71,23 @@
 			path = Aware;
 			sourceTree = "<group>";
 		};
+		8CBACA324E219FAC257B0141 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				8F247554E35B08CA181729F7 /* Pods_Aware.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		C3D6A86C96656BCFEB7A55E2 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				99B894386D350C566FBF7A34 /* Pods-Aware.debug.xcconfig */,
+				DE6B22E993FBB318B864801B /* Pods-Aware.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -71,9 +95,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 7355C6561DCB14CF00A5C990 /* Build configuration list for PBXNativeTarget "Aware" */;
 			buildPhases = (
+				A5FA05AD5DA76EF949F6DB2E /* [CP] Check Pods Manifest.lock */,
 				7355C6401DCB14CE00A5C990 /* Sources */,
 				7355C6411DCB14CE00A5C990 /* Frameworks */,
 				7355C6421DCB14CE00A5C990 /* Resources */,
+				5953DAE51DEFF53D7AAA82CF /* [CP] Embed Pods Frameworks */,
+				FD6E50286FA4C920308CDD8E /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -130,6 +157,54 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		5953DAE51DEFF53D7AAA82CF /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-Aware/Pods-Aware-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		A5FA05AD5DA76EF949F6DB2E /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+		FD6E50286FA4C920308CDD8E /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-Aware/Pods-Aware-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		7355C6401DCB14CE00A5C990 /* Sources */ = {
@@ -256,6 +331,7 @@
 		};
 		7355C6571DCB14CF00A5C990 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 99B894386D350C566FBF7A34 /* Pods-Aware.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				DEVELOPMENT_TEAM = "";
@@ -270,6 +346,7 @@
 		};
 		7355C6581DCB14CF00A5C990 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = DE6B22E993FBB318B864801B /* Pods-Aware.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				DEVELOPMENT_TEAM = "";
