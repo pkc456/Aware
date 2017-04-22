@@ -16,6 +16,11 @@
 		D49B85971E73FF8B0064B679 /* DSDLocationHandler.swift in Sources */ = {isa = PBXBuildFile; fileRef = D49B85961E73FF8B0064B679 /* DSDLocationHandler.swift */; };
 		D49B85991E7400870064B679 /* CoreLocation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D49B85981E7400870064B679 /* CoreLocation.framework */; };
 		D49B859B1E740DC50064B679 /* Utility.swift in Sources */ = {isa = PBXBuildFile; fileRef = D49B859A1E740DC50064B679 /* Utility.swift */; };
+		D4A23EF41EAB185900E55CEB /* WebServiceHandler.swift in Sources */ = {isa = PBXBuildFile; fileRef = D4A23EF31EAB185900E55CEB /* WebServiceHandler.swift */; };
+		D4A23EFB1EAB188A00E55CEB /* HomeBusinessLayer.swift in Sources */ = {isa = PBXBuildFile; fileRef = D4A23EF71EAB188A00E55CEB /* HomeBusinessLayer.swift */; };
+		D4A23F011EAB19C100E55CEB /* Aware_details.swift in Sources */ = {isa = PBXBuildFile; fileRef = D4A23EFE1EAB19C100E55CEB /* Aware_details.swift */; };
+		D4A23F021EAB19C100E55CEB /* JSONCompatible.swift in Sources */ = {isa = PBXBuildFile; fileRef = D4A23EFF1EAB19C100E55CEB /* JSONCompatible.swift */; };
+		D4A23F031EAB19C100E55CEB /* Root.swift in Sources */ = {isa = PBXBuildFile; fileRef = D4A23F001EAB19C100E55CEB /* Root.swift */; };
 		EF4BE0C8264B5074CC063B5E /* Pods_Aware.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8F247554E35B08CA181729F7 /* Pods_Aware.framework */; };
 /* End PBXBuildFile section */
 
@@ -33,6 +38,11 @@
 		D49B85961E73FF8B0064B679 /* DSDLocationHandler.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DSDLocationHandler.swift; sourceTree = "<group>"; };
 		D49B85981E7400870064B679 /* CoreLocation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreLocation.framework; path = System/Library/Frameworks/CoreLocation.framework; sourceTree = SDKROOT; };
 		D49B859A1E740DC50064B679 /* Utility.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Utility.swift; sourceTree = "<group>"; };
+		D4A23EF31EAB185900E55CEB /* WebServiceHandler.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WebServiceHandler.swift; sourceTree = "<group>"; };
+		D4A23EF71EAB188A00E55CEB /* HomeBusinessLayer.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HomeBusinessLayer.swift; sourceTree = "<group>"; };
+		D4A23EFE1EAB19C100E55CEB /* Aware_details.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Aware_details.swift; sourceTree = "<group>"; };
+		D4A23EFF1EAB19C100E55CEB /* JSONCompatible.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = JSONCompatible.swift; sourceTree = "<group>"; };
+		D4A23F001EAB19C100E55CEB /* Root.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Root.swift; sourceTree = "<group>"; };
 		DE6B22E993FBB318B864801B /* Pods-Aware.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Aware.release.xcconfig"; path = "Pods/Target Support Files/Pods-Aware/Pods-Aware.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -70,6 +80,8 @@
 		7355C6461DCB14CF00A5C990 /* Aware */ = {
 			isa = PBXGroup;
 			children = (
+				D4A23EF51EAB188A00E55CEB /* Business Layer */,
+				D4A23EF81EAB188A00E55CEB /* Model */,
 				D49B85941E73FF8B0064B679 /* Utility */,
 				7355C6471DCB14CF00A5C990 /* AppDelegate.swift */,
 				7355C6491DCB14CF00A5C990 /* ViewController.swift */,
@@ -102,6 +114,7 @@
 		D49B85941E73FF8B0064B679 /* Utility */ = {
 			isa = PBXGroup;
 			children = (
+				D4A23EF21EAB185900E55CEB /* WebService Handler */,
 				D49B859A1E740DC50064B679 /* Utility.swift */,
 				D49B85951E73FF8B0064B679 /* Location Handler */,
 				D49255551E74593D00A3C85D /* Constant.swift */,
@@ -115,6 +128,48 @@
 				D49B85961E73FF8B0064B679 /* DSDLocationHandler.swift */,
 			);
 			path = "Location Handler";
+			sourceTree = "<group>";
+		};
+		D4A23EF21EAB185900E55CEB /* WebService Handler */ = {
+			isa = PBXGroup;
+			children = (
+				D4A23EF31EAB185900E55CEB /* WebServiceHandler.swift */,
+			);
+			path = "WebService Handler";
+			sourceTree = "<group>";
+		};
+		D4A23EF51EAB188A00E55CEB /* Business Layer */ = {
+			isa = PBXGroup;
+			children = (
+				D4A23EF61EAB188A00E55CEB /* Music Information Business Layer */,
+			);
+			path = "Business Layer";
+			sourceTree = "<group>";
+		};
+		D4A23EF61EAB188A00E55CEB /* Music Information Business Layer */ = {
+			isa = PBXGroup;
+			children = (
+				D4A23EF71EAB188A00E55CEB /* HomeBusinessLayer.swift */,
+			);
+			path = "Music Information Business Layer";
+			sourceTree = "<group>";
+		};
+		D4A23EF81EAB188A00E55CEB /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				D4A23EFD1EAB19C100E55CEB /* Aware home details */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		D4A23EFD1EAB19C100E55CEB /* Aware home details */ = {
+			isa = PBXGroup;
+			children = (
+				D4A23EFE1EAB19C100E55CEB /* Aware_details.swift */,
+				D4A23EFF1EAB19C100E55CEB /* JSONCompatible.swift */,
+				D4A23F001EAB19C100E55CEB /* Root.swift */,
+			);
+			path = "Aware home details";
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -242,10 +297,15 @@
 			buildActionMask = 2147483647;
 			files = (
 				D49B859B1E740DC50064B679 /* Utility.swift in Sources */,
+				D4A23EF41EAB185900E55CEB /* WebServiceHandler.swift in Sources */,
 				7355C64A1DCB14CF00A5C990 /* ViewController.swift in Sources */,
+				D4A23F011EAB19C100E55CEB /* Aware_details.swift in Sources */,
 				D49255561E74593D00A3C85D /* Constant.swift in Sources */,
 				D49B85971E73FF8B0064B679 /* DSDLocationHandler.swift in Sources */,
+				D4A23F021EAB19C100E55CEB /* JSONCompatible.swift in Sources */,
+				D4A23EFB1EAB188A00E55CEB /* HomeBusinessLayer.swift in Sources */,
 				7355C6481DCB14CF00A5C990 /* AppDelegate.swift in Sources */,
+				D4A23F031EAB19C100E55CEB /* Root.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

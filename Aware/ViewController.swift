@@ -49,6 +49,16 @@ SKPaymentTransactionObserver {
         // Dispose of any resources that can be recreated.
     }
 
+    func postAwareDetails(successBlock:@escaping () -> Void){
+        let params = ["address":textfieldLocation.text, "name":textfieldName.text, "query": textViewDetails.text, "title":textfieldTitle.text]
+        WebServiceHandler.sharedInstance.postAwareInformation(parameters: params, successBlock: { (result) in            
+            self.showAlert(title: "Ticket number: \(result.aware_details.id)", message: result.message)
+            successBlock()
+        }) { (error) in
+            self.showAlert(title: "Error", message: error.localizedDescription)
+        }
+    }
+    
     //MARK: IBActions
     @IBAction func btnGetLocationAction(_ sender: UIButton) {
         self.enableLocationServices()
@@ -57,12 +67,15 @@ SKPaymentTransactionObserver {
     @IBAction func btnSendAction(_ sender: UIBarButtonItem) {
         
         if(isValid()){
-            let mailComposeViewController = configuredMailComposeViewController()
-            if MFMailComposeViewController.canSendMail() {
-                self.present(mailComposeViewController, animated: true, completion: nil)
-            } else {
-                self.showSendMailErrorAlert()
-            }
+            postAwareDetails(successBlock: { 
+                
+            })
+//            let mailComposeViewController = configuredMailComposeViewController()
+//            if MFMailComposeViewController.canSendMail() {
+//                self.present(mailComposeViewController, animated: true, completion: nil)
+//            } else {
+//                self.showSendMailErrorAlert()
+//            }
         }else{
             
         }

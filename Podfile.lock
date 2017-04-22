@@ -1,4 +1,5 @@
 PODS:
+  - Alamofire (4.4.0)
   - HexColors (4.0.0)
   - IQKeyboardManagerSwift (4.0.8)
   - JVFloatLabeledTextField (1.1.1)
@@ -8,17 +9,19 @@ PODS:
     - PPTopMostController
 
 DEPENDENCIES:
+  - Alamofire (~> 4.0)
   - IQKeyboardManagerSwift
   - JVFloatLabeledTextField (~> 1.1)
   - RMessage
 
 SPEC CHECKSUMS:
+  Alamofire: dc44b1600b800eb63da6a19039a0083d62a6a62d
   HexColors: 5f95843ef89aff6a72e1fd3a8ebabf205cc43379
   IQKeyboardManagerSwift: c04bc9f68473823f825eb44d958fce98d921bead
   JVFloatLabeledTextField: 0e5524b097f102036214dd8279edc8ecf08b5e18
   PPTopMostController: 4e6f1e5f8c645bdcc74cd837a20f607ff262c048
   RMessage: '048425648963c999e4ad2836d8e706b9692af14a'
 
-PODFILE CHECKSUM: 95f349ace07e5594ccec73e732054827aa07e7a6
+PODFILE CHECKSUM: b0d61b3f40e2e5aee290161162bfa33d2d4f1a2d
 
 COCOAPODS: 1.1.1

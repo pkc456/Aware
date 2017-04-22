@@ -6,8 +6,8 @@ target 'Aware' do
   use_frameworks!
 
   # Pods for Aware
-  pod 'IQKeyboardManagerSwift'
-  pod 'JVFloatLabeledTextField', '~> 1.1'
-  pod 'RMessage'
-
+    pod 'IQKeyboardManagerSwift'
+    pod 'JVFloatLabeledTextField', '~> 1.1'
+    pod 'RMessage'
+    pod 'Alamofire', '~> 4.0'
 end
